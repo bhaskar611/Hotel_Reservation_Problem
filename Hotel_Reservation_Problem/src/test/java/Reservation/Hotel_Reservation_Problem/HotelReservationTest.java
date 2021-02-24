@@ -1,5 +1,7 @@
 package Reservation.Hotel_Reservation_Problem;
 
+import java.util.ArrayList;
+
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -13,11 +15,13 @@ public class HotelReservationTest
 	}
 	
 	// testing for cheap hotel	
-	 @Test
-     public void Test()throws Exception {
-         HotelReservation hotelReservation = new HotelReservation();
-         hotelReservation.HotelDetails();
-         String cheapHotel = hotelReservation.CheapestHotel("10Sep2020", "11Sep2020");
-         Assert.assertEquals("Lakewood", cheapHotel);
-     }
+	@Test
+	public void givenDate_shouldReturn_CheapestHotelNameAndRate() throws Exception {
+		hotelReservation.HotelDetails();
+		
+		ArrayList<String> hotelNameList = hotelReservation.CheapestHotel("2020-09-10", "2020-09-11");
+		Object[] hotelName = hotelNameList.toArray();
+		Object[] arrayExpectedOutput = { "LakeWood", "BridgeWood" };
+		Assert.assertArrayEquals(arrayExpectedOutput, hotelName);
+	}
 }
