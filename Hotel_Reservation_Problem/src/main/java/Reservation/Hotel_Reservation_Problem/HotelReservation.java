@@ -14,9 +14,9 @@ public class HotelReservation {
 	
 
 	public void HotelDetails() {
-		hotelList.add(new Hotel("Lakewood", 110));
-		hotelList.add(new Hotel("Bridgewood", 150));
-		hotelList.add(new Hotel("Ridgewood", 220));
+		hotelList.add(new Hotel("Lakewood", 110, 90));
+		hotelList.add(new Hotel("Bridgewood", 150, 50 ));
+		hotelList.add(new Hotel("Ridgewood", 220, 150));
 	}
 
 
@@ -40,7 +40,7 @@ public class HotelReservation {
 		int regularHotelRate = hotelList.stream().min(Comparator.comparing(Hotel::getRegularRate)).get().getRegularRate();
 		String hotelName = hotelList.stream().min(Comparator.comparing(Hotel::getRegularRate)).get().getHotelName();
 
-		System.out.println("The Cheapest Hotel is "+hotelName+" with cost for respective date as "+regularHotelRate+"$");
+		System.out.println("The Cheapest Hotel is "+hotelName+" with cost "+regularHotelRate+"$");
 		return hotelName;
 
 	}
