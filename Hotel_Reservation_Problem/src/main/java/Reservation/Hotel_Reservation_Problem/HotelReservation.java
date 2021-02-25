@@ -27,6 +27,7 @@ public class HotelReservation {
 		hotelList.add(new Hotel("Bridgewood", 4, 150, 50));
 		hotelList.add(new Hotel("Ridgewood", 5, 220, 150));
 	}
+	
 
 
 	private static long countWeekDaysMath(LocalDate arrival, LocalDate departure) {
@@ -56,11 +57,11 @@ public class HotelReservation {
 				+ hotelList.get(2).getWeekendRate() * weekendDays);
 		long minCostHotel = Math.min(minCostRidgeWood, Math.min(minCostBridgeWood, minCostLakeWood));
 		if (minCostHotel == minCostLakeWood)
-			hotel.add("LakeWood");
+			hotel.add("LakeWood 3 Rating" );
 		if (minCostHotel == minCostBridgeWood)
-			hotel.add("BridgeWood");
+			hotel.add("BridgeWood 4 Rating");
 		if (minCostHotel == minCostRidgeWood)
-			hotel.add("RidgeWood");
+			hotel.add("RidgeWood 5 Rating");
 		System.out.println("The minimum cost for Hotel is " + minCostHotel + hotel);
 		return hotel;
 	}
