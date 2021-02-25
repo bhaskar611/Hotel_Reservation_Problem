@@ -48,4 +48,7 @@ public class Hotel {
 	public void setHotelRating(int hotelRating) {
 		this.hotelRating = hotelRating;
 	}
+	public String toString() {
+		return "Hotel [hotelName=" + hotelName + ", regularRate=" + regularRate + ", weekendRate=" + weekendRate + ", hotelRating=" +  hotelRating ;
+	}
 }	
