@@ -2,14 +2,13 @@ package Reservation.Hotel_Reservation_Problem;
 
 public class Hotel {
 
-	
+	// Parameters
 	private String hotelName;
 	private int hotelRating;
 	private int regularRate;
 	private int weekendRate;
 
-
-	
+	// Parameterized Constructor
 	public Hotel(String hotelName, int hotelRating, int regularRate, int weekendRate) {
 		this.hotelName = hotelName;
 		this.hotelRating = hotelRating;
@@ -17,7 +16,7 @@ public class Hotel {
 		this.weekendRate = weekendRate;
 	}
 
-	
+	// Getter And Setter Methods
 	public String getHotelName() {
 		return hotelName;
 	}
@@ -41,6 +40,7 @@ public class Hotel {
 	public void setWeekendRate(int weekendRate) {
 		this.weekendRate = weekendRate;
 	}
+
 	public int getHotelRating() {
 		return hotelRating;
 	}
@@ -48,6 +48,7 @@ public class Hotel {
 	public void setHotelRating(int hotelRating) {
 		this.hotelRating = hotelRating;
 	}
+
 	public String toString() {
 		return "Hotel [hotelName=" + hotelName + ", regularRate=" + regularRate + ", weekendRate=" + weekendRate + ", hotelRating=" +  hotelRating ;
 	}
